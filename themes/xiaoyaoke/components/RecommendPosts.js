@@ -8,7 +8,7 @@ import { siteConfig } from '@/lib/config'
  */
 const RecommendPosts = ({ recommendPosts }) => {
   const { locale } = useGlobal()
-  if (!siteConfig('NEXT_ARTICLE_RELATE_POSTS', null, CONFIG) || !recommendPosts || recommendPosts.length < 1) {
+  if (!siteConfig('XIAOYAOKE_ARTICLE_RELATE_POSTS', null, CONFIG) || !recommendPosts || recommendPosts.length < 1) {
     return <></>
   }
 

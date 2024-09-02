@@ -6,7 +6,7 @@ import { siteConfig } from '@/lib/config'
 export default function FloatDarkModeButton () {
   const { isDarkMode, updateDarkMode } = useGlobal()
 
-  if (!siteConfig('NEXT_WIDGET_DARK_MODE', null, CONFIG)) {
+  if (!siteConfig('XIAOYAOKE_WIDGET_DARK_MODE', null, CONFIG)) {
     return <></>
   }
 

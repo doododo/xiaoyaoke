@@ -16,7 +16,7 @@ import BlogPostListEmpty from './BlogPostListEmpty'
 const BlogPostListScroll = ({
   posts = [],
   currentSearch,
-  showSummary = siteConfig('NEXT_POST_LIST_SUMMARY', null, CONFIG)
+  showSummary = siteConfig('XIAOYAOKE_POST_LIST_SUMMARY', null, CONFIG)
 }) => {
   const { NOTION_CONFIG } = useGlobal()
   const POSTS_PER_PAGE = siteConfig('POSTS_PER_PAGE', null, NOTION_CONFIG)

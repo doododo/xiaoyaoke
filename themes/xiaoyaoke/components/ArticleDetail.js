@@ -25,7 +25,7 @@ export default function ArticleDetail(props) {
   const { post, recommendPosts, prev, next } = props
   const url = siteConfig('LINK') + useRouter().asPath
   const { locale } = useGlobal()
-  const showArticleInfo = siteConfig('NEXT_ARTICLE_INFO', null, CONFIG)
+  const showArticleInfo = siteConfig('XIAOYAOKE_ARTICLE_INFO', null, CONFIG)
   // 动画样式  首屏卡片不用，后面翻出来的加动画
   const aosProps = {
     'data-aos': 'fade-down',
@@ -45,7 +45,7 @@ export default function ArticleDetail(props) {
         {showArticleInfo && (
           <header {...aosProps}>
             {/* 头图 */}
-            {siteConfig('NEXT_POST_HEADER_IMAGE_VISIBLE', null, CONFIG) &&
+            {siteConfig('XIAOYAOKE_POST_HEADER_IMAGE_VISIBLE', null, CONFIG) &&
               post?.type &&
               !post?.type !== 'Page' &&
               post?.pageCover && (

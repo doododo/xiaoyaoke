@@ -29,7 +29,7 @@ const SideAreaRight = (props) => {
 
   return (<aside id='right' className={(JSON.parse(siteConfig('LAYOUT_SIDEBAR_REVERSE')) ? 'mr-4' : 'ml-4') + ' space-y-4 hidden xl:block flex-col w-60 relative z-10'}>
 
-        {siteConfig('NEXT_RIGHT_AD', null, CONFIG) && <Card className='mb-2'>
+        {siteConfig('XIAOYAOKE_RIGHT_AD', null, CONFIG) && <Card className='mb-2'>
             {/* 展示广告  */}
             <ins
                 className='adsbygoogle'
@@ -48,11 +48,11 @@ const SideAreaRight = (props) => {
                 <Announcement post={notice} />
             </Card>}
 
-            {siteConfig('NEXT_RIGHT_LATEST_POSTS', null, CONFIG) && <Card><LatestPostsGroup latestPosts={latestPosts} /></Card>}
+            {siteConfig('XIAOYAOKE_RIGHT_LATEST_POSTS', null, CONFIG) && <Card><LatestPostsGroup latestPosts={latestPosts} /></Card>}
             {slot}
 
             {/* 分类  */}
-            {siteConfig('NEXT_RIGHT_CATEGORY_LIST', null, CONFIG) && router.asPath !== '/category' && categoryOptions && (
+            {siteConfig('XIAOYAOKE_RIGHT_CATEGORY_LIST', null, CONFIG) && router.asPath !== '/category' && categoryOptions && (
                 <Card>
                     <div className='text-sm px-2 flex flex-nowrap justify-between font-light'>
                         <div className='pb-2 text-gray-600 dark:text-gray-300'><i className='mr-2 fas fa-th-list' />{locale.COMMON.CATEGORY}</div>
@@ -69,7 +69,7 @@ const SideAreaRight = (props) => {
                 </Card>
             )}
 
-            {siteConfig('NEXT_RIGHT_TAG_LIST', null, CONFIG) && router.asPath !== '/tag' && tagOptions && (
+            {siteConfig('XIAOYAOKE_RIGHT_TAG_LIST', null, CONFIG) && router.asPath !== '/tag' && tagOptions && (
                 <Card>
                     <div className="text-sm pb-1 px-2 flex flex-nowrap justify-between font-light dark:text-gray-200">
                         <div className="text-gray-600 dark:text-gray-200">

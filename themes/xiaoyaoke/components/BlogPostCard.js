@@ -11,7 +11,7 @@ import TagItemMini from './TagItemMini'
 
 const BlogPostCard = ({ post, index, showSummary }) => {
   const showPreview =
-    siteConfig('NEXT_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
+    siteConfig('XIAOYAOKE_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
   // 动画样式  首屏卡片不用，后面翻出来的加动画
   const aosProps =
     index > 2
@@ -101,7 +101,7 @@ const BlogPostCard = ({ post, index, showSummary }) => {
           )}
         </div>
 
-        {siteConfig('NEXT_POST_LIST_COVER', null, CONFIG) &&
+        {siteConfig('XIAOYAOKE_POST_LIST_COVER', null, CONFIG) &&
           post?.pageCoverThumbnail && (
             <Link href={post?.href} passHref legacyBehavior>
               <div className='h-72 w-full relative duration-200 cursor-pointer transform overflow-hidden'>

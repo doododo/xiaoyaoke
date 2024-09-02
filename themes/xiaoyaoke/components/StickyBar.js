@@ -14,7 +14,7 @@ let windowTop = 0
 const StickyBar = ({ children }) => {
   // 滚动页面时导航条样式调整
   const scrollTrigger = useCallback(throttle(() => {
-    if (siteConfig('NEXT_NAV_TYPE', null, CONFIG) === 'normal') {
+    if (siteConfig('XIAOYAOKE_NAV_TYPE', null, CONFIG) === 'normal') {
       return
     }
     const scrollS = window.scrollY
