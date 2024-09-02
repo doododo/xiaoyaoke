@@ -12,7 +12,7 @@ import { siteConfig } from '@/lib/config'
  */
 const JumpToTopButton = ({ showPercent = true, percent }) => {
   const { locale } = useGlobal()
-  if (!siteConfig('NEXT_WIDGET_TO_TOP', null, CONFIG)) {
+  if (!siteConfig('XIAOYAOKE_WIDGET_TO_TOP', null, CONFIG)) {
     return <></>
   }
   return (<div className='flex space-x-1 items-center transform hover:scale-105 duration-200 py-2 px-3' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} >

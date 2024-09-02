@@ -26,14 +26,14 @@ export const MenuList = props => {
       icon: 'fas fa-th',
       name: locale.COMMON.CATEGORY,
       href: '/category',
-      show: siteConfig('NEXT_MENU_CATEGORY', null, CONFIG)
+      show: siteConfig('XIAOYAOKE_MENU_CATEGORY', null, CONFIG)
     },
     {
       id: 3,
       icon: 'fas fa-tag',
       name: locale.COMMON.TAGS,
       href: '/tag',
-      show: siteConfig('NEXT_MENU_TAG', null, CONFIG)
+      show: siteConfig('XIAOYAOKE_MENU_TAG', null, CONFIG)
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export const MenuList = props => {
       name: locale.NAV.ARCHIVE,
       href: '/archive',
       slot: archiveSlot,
-      show: siteConfig('NEXT_MENU_ARCHIVE', null, CONFIG)
+      show: siteConfig('XIAOYAOKE_MENU_ARCHIVE', null, CONFIG)
     }
   ]
 

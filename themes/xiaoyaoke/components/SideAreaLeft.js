@@ -35,7 +35,7 @@ const SideAreaLeft = props => {
           <div className='pt-2 px-2 '>
             <MenuList allowCollapse={true} {...props} />
           </div>
-          {siteConfig('NEXT_MENU_SEARCH', null, CONFIG) && (
+          {siteConfig('XIAOYAOKE_MENU_SEARCH', null, CONFIG) && (
             <div className='px-2 pt-2 '>
               <SearchInput {...props} />
             </div>

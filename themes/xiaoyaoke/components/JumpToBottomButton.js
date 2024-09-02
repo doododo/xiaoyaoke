@@ -38,7 +38,7 @@ const JumpToBottomButton = ({ showPercent = false }) => {
     window.scrollTo({ top: targetRef.clientHeight, behavior: 'smooth' })
   }
 
-  if (!siteConfig('NEXT_WIDGET_TO_BOTTOM', null, CONFIG)) {
+  if (!siteConfig('XIAOYAOKE_WIDGET_TO_BOTTOM', null, CONFIG)) {
     return <></>
   }
 
