@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+next.tar.gz
+Makefile
+
 # production
 /build
 
