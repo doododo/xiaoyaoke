@@ -13,15 +13,23 @@ const Footer = props => {
   const since = siteConfig('SINCE')
   const copyrightDate =
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
-  const { categoryOptions, customMenu } = props
-
+  const customMenu1 = [
+    { name: "日常购物", href: "https://11010.net/my-shop" },
+    { name: "Xbox游戏", href: "https://11010.net/xbox-game" },
+    { name: "积存金行情", href: "https://mybank.icbc.com.cn/icbc/newperbank/perbank3/gold/goldaccrual_query_out.jsp" },
+  ];
+  const customMenu2 = [
+    { name: "Pdf工具箱", href: "https://pdf.11010.net" },
+    { name: "Sql转Struct", href: "https://toolin.cn/sql2go" },
+    { name: "Axhub原型托管", href: "https://pr.gend.cn" },
+  ];
   return (
     <footer
       id='footer-wrapper'
       className='relative bg-[#2A2A2A] justify-center w-full leading-6 text-gray-300 text-sm md:p-10'>
       <div id='footer-container' className='w-full mx-auto max-w-screen-xl'>
         <div className='flex'>
-          {/* 页脚左侧菜单组 */}
+          {/* 页脚工具库菜单组 */}
           <div className='hidden md:flex flex-grow my-4 space-x-20 text-lg  '>
             {/* 分类菜单  */}
             <div>
@@ -35,21 +43,21 @@ const Footer = props => {
               <nav
                 id='home-nav-button'
                 className={'flex flex-col space-y-2 text-start'}>
-                {categoryOptions?.map(category => {
+                {customMenu1?.map(menu => {
                   return (
                     <Link
-                      key={`${category.name}`}
-                      title={`${category.name}`}
-                      href={`/category/${category.name}`}
+                      key={`${menu.name}`}
+                      title={`${menu.name}`}
+                      href={`${menu.href}`}
                       passHref>
-                      {category.name}
+                      {menu.name}
                     </Link>
                   )
                 })}
               </nav>
             </div>
 
-            {/* 系统菜单  */}
+            {/* 页脚娱乐库菜单  */}
             <div>
               <div className='font-bold mb-4 text-white'>
                 {siteConfig('XIAOYAOKE_TEXT_FOOTER_MENU_2', 'About US', CONFIG)}
@@ -57,7 +65,7 @@ const Footer = props => {
               <nav
                 id='home-nav-button'
                 className={'flex flex-col space-y-2 text-start'}>
-                {customMenu?.map(menu => {
+                {customMenu2?.map(menu => {
                   return (
                     <Link
                       key={`${menu.name}`}
