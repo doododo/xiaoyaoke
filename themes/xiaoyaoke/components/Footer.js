@@ -15,13 +15,13 @@ const Footer = props => {
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
   const customMenu1 = [
     { name: "日常购物", href: "https://11010.net/my-shop" },
-    { name: "Xbox游戏", href: "https://11010.net/xbox-game" },
+    { name: "Xbox 游戏", href: "https://11010.net/xbox-game" },
     { name: "积存金行情", href: "https://mybank.icbc.com.cn/icbc/newperbank/perbank3/gold/goldaccrual_query_out.jsp" },
   ];
   const customMenu2 = [
-    { name: "Pdf工具箱", href: "https://pdf.11010.net" },
-    { name: "Sql转Struct", href: "https://toolin.cn/sql2go" },
-    { name: "Axhub原型托管", href: "https://pr.gend.cn" },
+    { name: "Pdf 工具箱", href: "https://pdf.11010.net" },
+    { name: "IT 工具箱", href: "https://it-tools.11010.net" },
+    { name: "Axhub 原型托管", href: "https://pr.gend.cn" },
   ];
   return (
     <footer
