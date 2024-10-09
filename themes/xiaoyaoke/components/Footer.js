@@ -14,15 +14,19 @@ const Footer = props => {
   const copyrightDate =
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
   const customMenu1 = [
-    { name: "日常购物", href: "https://11010.net/my-shop" },
-    { name: "Xbox 游戏", href: "https://11010.net/xbox-game" },
-    { name: "积存金行情", href: "https://mybank.icbc.com.cn/icbc/newperbank/perbank3/gold/goldaccrual_query_out.jsp" },
-  ];
+    { name: '日常购物', href: 'https://11010.net/my-shop' },
+    { name: 'Xbox 游戏', href: 'https://11010.net/xbox-game' },
+    {
+      name: '积存金行情',
+      href: 'https://mybank.icbc.com.cn/icbc/newperbank/perbank3/gold/goldaccrual_query_out.jsp'
+    }
+  ]
   const customMenu2 = [
-    { name: "Pdf 工具箱", href: "https://pdf.11010.net" },
-    { name: "IT 工具箱", href: "https://it-tools.11010.net" },
-    { name: "Axhub 原型托管", href: "https://pr.gend.cn" },
-  ];
+    { name: 'Pdf 工具箱', href: 'https://pdf.11010.net' },
+    { name: 'IT 工具箱', href: 'https://it-tools.11010.net' },
+    { name: 'Logo 生成器', href: 'https://logo.11010.net' }
+  ]
+  const customMenu22 = [{ name: 'Axhub 原型托管', href: 'https://pr.gend.cn' }]
   return (
     <footer
       id='footer-wrapper'
@@ -57,7 +61,7 @@ const Footer = props => {
               </nav>
             </div>
 
-            {/* 页脚娱乐库菜单  */}
+            {/* 页脚工具库菜单  */}
             <div>
               <div className='font-bold mb-4 text-white'>
                 {siteConfig('XIAOYAOKE_TEXT_FOOTER_MENU_2', 'About US', CONFIG)}
@@ -66,6 +70,23 @@ const Footer = props => {
                 id='home-nav-button'
                 className={'flex flex-col space-y-2 text-start'}>
                 {customMenu2?.map(menu => {
+                  return (
+                    <Link
+                      key={`${menu.name}`}
+                      title={`${menu.name}`}
+                      href={`${menu.href}`}
+                      passHref>
+                      {menu.name}
+                    </Link>
+                  )
+                })}
+              </nav>
+            </div>
+            <div>
+              <nav
+                id='home-nav-button'
+                className={'flex flex-col space-y-2 text-start mt-11'}>
+                {customMenu22?.map(menu => {
                   return (
                     <Link
                       key={`${menu.name}`}
